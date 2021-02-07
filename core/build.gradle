@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion AppConfig.compileSdkVersion
+    buildToolsVersion AppConfig.buildToolsVersion
+
+    defaultConfig {
+        applicationId AppConfig.applicationId
+        minSdkVersion AppConfig.minSdkVersion
+        targetSdkVersion AppConfig.targetSdkVersion
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    // Lang
+    implementation Dependencies.KOTLIN
+
+    // Network
+    implementation Dependencies.RETROFIT
+    implementation Dependencies.OK_HTTP
+    implementation Dependencies.OK_HTTP_INTERCEPTOR
+    testImplementation Dependencies.OK_HTTP_TEST
+
+    // Converter
+    implementation Dependencies.GSON
+    implementation Dependencies.GSON_ADAPTER
+
+    // Async
+    implementation Dependencies.KOTLIN_COROUTINES
+
+    // DI
+    implementation Dependencies.KOIN
+    testImplementation Dependencies.KOIN_TEST
+}
