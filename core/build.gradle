@@ -1,34 +1,6 @@
 plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
+    id 'kotlin'
     id 'kotlin-kapt'
-}
-
-android {
-    compileSdkVersion AppConfig.compileSdkVersion
-    buildToolsVersion AppConfig.buildToolsVersion
-
-    defaultConfig {
-        applicationId AppConfig.applicationId
-        minSdkVersion AppConfig.minSdkVersion
-        targetSdkVersion AppConfig.targetSdkVersion
-        versionCode Releases.versionCode
-        versionName Releases.versionName
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 }
 
 dependencies {
@@ -51,5 +23,4 @@ dependencies {
 
     // DI
     implementation Dependencies.KOIN
-    testImplementation Dependencies.KOIN_TEST
 }
