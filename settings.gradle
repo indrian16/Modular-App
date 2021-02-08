@@ -1,6 +1,5 @@
 include ':features:detail'
 include ':features:home'
-include ':navigation'
 include ':core'
 include ':app'
 rootProject.name = "Modular App"
