@@ -36,6 +36,10 @@ dependencies {
     // Core
     implementation project(Modules.CORE)
 
+    // Features
+    implementation project(Modules.HOME)
+
+    // Android
     implementation Dependencies.KOTLIN
     implementation Dependencies.ANDROID_CORE_KTX
     implementation Dependencies.APPCOMPAT

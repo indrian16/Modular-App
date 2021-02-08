@@ -11,9 +11,7 @@ object Modules {
     const val CORE = ":core"
     const val NAVIGATION = ":navigation"
 
-    object Features {
-        const val HOME = ":features:home"
-    }
+    const val HOME = ":features:home"
 }
 
 object Releases {
@@ -38,6 +36,7 @@ object Versions {
     const val APPCOMPAT = "1.2.0"
     const val MATERIAL = "1.3.0"
     const val CONSTRAINT_LAYOUT = "2.0.4"
+    const val LEGACY_SUPPORT = "1.0.0"
 
     // Navigation Component
     const val NAVIGATION = "2.3.3"
@@ -70,6 +69,7 @@ object Dependencies {
     const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
     const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
     const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
+    const val LEGACY_SUPPORT = "androidx.legacy:legacy-support-v4:${Versions.LEGACY_SUPPORT}"
 
     // Navigation Component
     const val NAV_FRAG = "androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}"
