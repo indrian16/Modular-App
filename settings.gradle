@@ -1,3 +1,4 @@
+include ':features:detail'
 include ':features:home'
 include ':navigation'
 include ':core'

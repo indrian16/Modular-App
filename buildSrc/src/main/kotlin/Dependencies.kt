@@ -12,6 +12,7 @@ object Modules {
     const val NAVIGATION = ":navigation"
 
     const val HOME = ":features:home"
+    const val DETAIL = ":features:detail"
 }
 
 object Releases {

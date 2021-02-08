@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
 }
 
@@ -8,13 +8,13 @@ android {
     buildToolsVersion AppConfig.buildToolsVersion
 
     defaultConfig {
-        applicationId AppConfig.applicationId
         minSdkVersion AppConfig.minSdkVersion
         targetSdkVersion AppConfig.targetSdkVersion
         versionCode Releases.versionCode
         versionName Releases.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -33,12 +33,6 @@ android {
 }
 
 dependencies {
-    // Core
-    implementation project(Modules.CORE)
-
-    // Features
-    implementation project(Modules.HOME)
-    implementation project(Modules.DETAIL)
 
     // Android
     implementation Dependencies.KOTLIN
@@ -46,8 +40,9 @@ dependencies {
     implementation Dependencies.APPCOMPAT
     implementation Dependencies.MATERIAL
     implementation Dependencies.CONSTRAINT_LAYOUT
+    implementation Dependencies.LEGACY_SUPPORT
 
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
