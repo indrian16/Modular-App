@@ -9,6 +9,7 @@ object AppConfig {
 object Modules {
     const val APP = ":app"
     const val CORE = ":core"
+    const val NAVIGATION = ":navigation"
 
     object Features {
         const val HOME = ":features:home"

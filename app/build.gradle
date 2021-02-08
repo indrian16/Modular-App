@@ -33,9 +33,12 @@ android {
 }
 
 dependencies {
+    // Core
     implementation project(Modules.CORE)
+    // Navigation
+    implementation project(Modules.NAVIGATION)
 
-    implementation Dependencies.KOIN
+    implementation Dependencies.KOTLIN
     implementation Dependencies.ANDROID_CORE_KTX
     implementation Dependencies.APPCOMPAT
     implementation Dependencies.MATERIAL
