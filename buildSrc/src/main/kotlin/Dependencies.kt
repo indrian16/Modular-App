@@ -31,6 +31,15 @@ object Versions {
 
     // Koin
     const val KOIN = "2.2.2"
+
+    // Android
+    const val ANDROID_CORE_KTX = "1.3.2"
+    const val APPCOMPAT = "1.2.0"
+    const val MATERIAL = "1.3.0"
+    const val CONSTRAINT_LAYOUT = "2.0.4"
+
+    // Navigation Component
+    const val NAVIGATION = "2.3.3"
 }
 
 object Dependencies {
@@ -54,4 +63,14 @@ object Dependencies {
     // Koin
     const val KOIN = "org.koin:koin-core:${Versions.KOIN}"
     const val KOIN_TEST = "org.koin:koin-test:${Versions.KOIN}"
+
+    // Android
+    const val ANDROID_CORE_KTX = "androidx.core:core-ktx:${Versions.ANDROID_CORE_KTX}"
+    const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
+    const val MATERIAL = "com.google.android.material:material:${Versions.MATERIAL}"
+    const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
+
+    // Navigation Component
+    const val NAV_FRAG = "androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}"
+    const val NAV_UI = "androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}"
 }

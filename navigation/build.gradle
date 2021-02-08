@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
 }
 
@@ -33,15 +33,7 @@ android {
 }
 
 dependencies {
-    implementation project(Modules.CORE)
-
-    implementation Dependencies.KOIN
-    implementation Dependencies.ANDROID_CORE_KTX
-    implementation Dependencies.APPCOMPAT
-    implementation Dependencies.MATERIAL
-    implementation Dependencies.CONSTRAINT_LAYOUT
-
-    testImplementation 'junit:junit:4.13.1'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation Dependencies.KOTLIN
+    implementation Dependencies.NAV_FRAG
+    implementation Dependencies.NAV_UI
 }
